@@ -1,0 +1,487 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0%;
+    padding: 0%;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+	position: relative;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: font 0.1s ease-in;
+}
+
+.nav-links {
+	flex: 1;
+    display: flex;
+	justify-content: space-around;
+	overflow: hidden;
+}
+
+.nav-links a {
+	vertical-align: middle;
+}
+
+nav a:hover {
+    color: red;
+    font-size: 1.375em;
+	font-weight: bolder;
+}
+
+#botoncontacto:hover {
+    color: black;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+	height: 1.8em;
+	margin-left: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.logo img{
+	height: 100%;
+}
+
+.brand-list {
+    display: flex;
+    /*align-items: center;
+    margin-right: 1.25em;*/
+	justify-content: space-around;
+	margin: 1em;
+}
+
+.brand-item {
+    /*margin-left: 1.25em;*/ 
+	margin: 0.5em;
+}
+
+.brand-item img {
+    max-height: 5em;
+    max-width: 100%;
+}
+
+#carrusel {
+    background: #333;
+}
+
+#carrusel img {
+    max-height: 37.5em;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.mensajebienvenida {
+    background-color: white;
+    padding: 1.25em;
+    margin-top: 1.25em;
+}
+
+.mensajebienvenida h3 {
+    color: #000;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.mensajebienvenida p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3.125em;
+}
+
+.tarjeta {
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 1.25em;
+    border-radius: 0.625em;
+    box-shadow: 0 0.125em 0.25em rgba(0,0,0,0.3);
+    max-width: 12.5em;
+    width: 30%;
+    height: 12em;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.tarjeta:hover {
+    /*background-color: black;*/
+    /*color: white;*/
+    /*border-radius: 3.125em;*/
+    /*border-style:ridge;*/
+    filter: invert(1);
+}
+
+.introducciontarjetas {
+    text-align: center;
+}
+
+.tarjeta img {
+    width: 5em;
+    height: 5em;
+    object-fit: contain;
+}
+
+.tarjeta h4 {
+    margin-top: 1.25em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contactanos {
+    text-align: center;
+}
+
+#formulario {
+    margin: 0.9375em;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.25em;
+    font-size: 0.875em;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer img {
+    max-width: 70%;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#noticias {
+    padding: 3.125em;
+    background-color: white;
+}
+
+#noticias h2 {
+    margin-bottom: 1.875em;
+}
+
+#noticias ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content: space-between;
+    /*    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.875em;*/
+}
+
+#noticias li {
+    background-color: #fff;
+    border-radius: 0.3125em;
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 30%;
+    margin-bottom: 1em;
+}
+
+#noticias h3 {
+    margin: 0;
+    padding: 1.25em;
+    background-color: #333;
+    color: #fff;
+}
+
+#noticias img {
+    max-width: 100%;
+    max-height: 20%;
+}
+
+#noticias p {
+    padding: 1.25em;
+    margin: 0;
+}
+
+#noticias a {
+    display: block;
+    padding: 1.25em;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#noticias a:hover {
+    background-color: #666;
+}
+
+@media only screen and (max-width: 1024px) {
+    #noticias ul {
+        flex-direction: column;
+    }
+
+    #noticias li {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+	
+	.menu {
+		display: block !important;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		height: 0em;
+		z-index: 2;
+		background: #333;
+		transition: height 0.3s ease-in;
+	}
+	
+	.nav-links.open {
+		height: 2em;
+	}
+}
+
+.social-icons {
+    list-style: none;
+}
+
+/*carros*/
+#cars {
+    width: 95%;
+    margin: auto;
+}
+
+#cars .accordion .accordion-item .accordion-button > img{
+    width: 2em;
+    margin: 0 1em;
+}
+
+#cars .accordion .accordion-item .accordion-body ul{
+    list-style: none;
+    padding: 0;
+}
+
+#cars .accordion .accordion-item .accordion-body ul > li{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0.5em 0;
+    border-bottom: 0.0625em solid #e7e7e7;
+}
+
+#cars .accordion .accordion-item .accordion-body ul > li img,
+#cars .accordion .accordion-item .accordion-body ul > li p{
+    margin: 0;
+}
+
+#cars .accordion .accordion-item .accordion-body ul > li button{
+    padding: 0.5em 1em;
+    border-radius: 0.3125em;
+}
+
+#audis{
+
+    width: 17em;
+    display: flex;
+
+}
+
+#porche{
+    width: 15em;
+    display: flex;
+}
+
+/*logo footer*/
+#catalogo {
+    margin: 3.125em;
+}
+
+.autos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.auto {
+    width: 30%;
+    margin-bottom: 3.125em;
+    padding: 1.25em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.3125em;
+    box-shadow: 0 0 0.3125em rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#titulocatalogo {
+    text-align: center;
+    margin-bottom: 3.125em;
+}
+
+.auto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.25em;
+    border-radius: 0.3125em;
+}
+
+.auto h3 {
+    margin-bottom: 0.625em;
+}
+
+.auto p {
+    margin-bottom: 1.25em;
+}
+
+.auto a {
+    display: inline-block;
+    padding: 0.625em 1.25em;
+    background-color: black;
+    color: #fff;
+    border-radius: 0.3125em;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.auto a:hover {
+    background-color: red;
+    text-decoration: none;
+    color: white;
+}
+
+#auto {
+    background-color: white;
+}
+
+.logoscatalogo {
+    width: 3em;
+    height: 3em;
+}
+
+.sticker {
+    position: fixed;
+    bottom: 1.25em;
+    right: 1.25em;
+    width: 5em;
+    height: 5em;
+    background-color: red;
+    border-radius: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.125em;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.sticker span {
+    transform: rotate(-45deg);
+}
+
+.sticker a {
+    text-decoration: none;
+    color: white;
+}
+
+.sticker a:hover {
+    color: black;
+}
+
+.menu {
+	display: none;
+    background: #333;
+    position: relative;
+    width: 3em;
+    height: 3em;
+    margin: auto 1.5em;
+}
+
+.menu span {
+    position: absolute;
+    display: block;
+    height: 10%;
+    width: 100%;
+    background: #FFF;
+    top: 45%;
+}
+
+.menu span::before {
+    top: -250%;
+}
+
+.menu span::after {
+    top: 250%;
+}
+
+.menu span::after, .menu span::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+    transition-duration: .3s,.3s;
+    transition-delay: .3s,0s;
+    transition-property: top, transform;
+}
+
+.menu.open span {
+    background: transparent;
+}
+
+.menu.open span::before{
+	top:0%;
+	transform:rotate(45deg);
+}
+
+.menu.open span::after{
+	top:0%;
+	transform:rotate(-45deg);
+}
+
+.menu.open span::after, .menu.open span::before{
+    transition-delay: 0s,.3s;
+}
+

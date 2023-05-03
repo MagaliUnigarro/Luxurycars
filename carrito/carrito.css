@@ -1,0 +1,101 @@
+/*Carrito primer plano*/
+
+.minicart.chatbutton {
+  bottom: 6em;
+}
+
+.minicart {
+  /*fixed para que la posicion del carrito sea fija */
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  background-color: #e5e5e5;
+  z-index: 999;
+  border-radius: 100%;
+  height: 4em;
+  width: 4em;
+  z-index: 3;
+  box-shadow: 2px 2px 3px 2px #222;
+  padding: 0.5em;
+  transition: box-shadow 0.1s;
+}
+
+.minicart:hover {
+  box-shadow: none;
+}
+
+.minicart img {
+  width:100%;
+}
+/*carrito ventana */
+.cart {
+  position: fixed; /*fixed para que salga en cualquier parte del scroll*/
+  top: 0;
+  right: 0;
+  background-color: rgb(7, 0, 0);
+  width: 30%;
+  height: 100vh;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  box-shadow: -12px 17px 14px 0;
+}
+
+.cart h3 {
+  margin-top: 1em;
+}
+
+.close_button {
+  position: absolute;
+  top: 0.5em;
+  cursor: pointer;
+  left: 1em;
+  font-size: 20px;
+}
+
+.close_button:hover {
+  color: gray;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 1em 0;
+}
+
+.buttons > button {
+  border: none;
+  border-radius: 15px;
+  background-color: darkred;
+  color: white;
+  font-size: 16px;
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+}
+/*nth child para mandar operciones matematicas*/
+.buttons button:nth-child(2) {
+  background-color: darkgrey;
+  color: black;
+  font-weight: bold; /*negrita*/
+}
+
+#productList,
+.totalContainer{
+    list-style: none;
+    padding: 0;
+}
+
+#productList .productContainer .product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#productList .productContainer .product img{
+    height: 5em;
+    width: 6em;
+}

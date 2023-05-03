@@ -1,0 +1,51 @@
+      <br>
+      <h3 class="contactanos"  id="Contactanos">¡Contáctanos!</h3>
+      <form class="row g-3" id="formulario" method="post" action="contactanos.php">
+        <div class="col-md-6">
+          <label for="inputnombres" class="form-label">Nombres</label>
+          <input type="text" class="form-control" id="inputnombres" name="nombres" value="">
+        </div>
+        <div class="col-md-6">
+          <label for="inputapellidos" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" id="inputapellidos" name="apellido" value="<?php echo $_POST['apellido'];?>">
+        </div>
+        <div class="col-12">
+          <label for="inputemail" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="inputemail" placeholder="@" name="correoElectronico">
+        </div>
+        <div class="col-md-6">
+          <label for="inputdireccion" class="form-label">Dirección de residencia</label>
+          <input type="text" class="form-control" id="inputdireccion" name="direccion de residencia">
+        </div>
+        <div class="col-md-4">
+          <label for="inputciudad" class="form-label">Ciudad</label>
+          <select id="inputciudad" class="form-select" name="ciudad">
+            <option selected></option>
+            <option>Bogotá</option>
+            <option>Medellín</option>
+            <option>Cali</option>
+            <option>Barranquilla</option>
+            <option>Cartagena</option> 
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputmarca" class="form-label">¿En qué marca estás interesado?</label>
+          <select id="inputmarca" class="form-select" name="interes de marca">
+            <option selected></option>
+            <option>Mazda</option>
+            <option>BMW</option>
+            <option>Audi</option>
+            <option>Porsche</option>
+            <option>Mercedes-Benz</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Déjanos un breve mensaje indicando qué carro deseas y nos pondremos en contacto contigo lo antes posible</label>
+          <input type="text" class="form-control" id="inputAddress2" name="mensaje">
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary" style="background-color: red; border-color:red" id="botoncontacto">Enviar</button>
+        </div>
+      </form>
+      <br>
+      
