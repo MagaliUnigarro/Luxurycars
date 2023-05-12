@@ -1,31 +1,31 @@
-
 <!--- inicio boton chatbot -->
 <div class="minicart chatbutton" onclick="algoconelchat()">
-    <img src="img/chatbot.png">
+  <img src="img/chatbot.png" />
 </div>
 <!--- fin boton chatbot -->
 
 <!-- inicio ventana de chat-->
 <div class="ventana chat open" id="ventanaChat">
-    <div class="botones">
-        <button onclick="algoconelchat()">x</button>
-    </div>
-    <form onsubmit="inicio()">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre"><br>
-        <label for="tipo_documento">Tipo de documento:</label>
-		<select id="tipo_documento" name="tipo_documento">
-			<option value="cedula">Cédula</option>
-			<option value="tarjeta_identidad">Tarjeta de identidad</option>
-			<option value="pasaporte">Pasaporte</option>
-			<option value="otros">Otros</option>
-		</select><br>
+  <div class="botones">
+    <button onclick="algoconelchat()">x</button>
+  </div>
+  <form onsubmit="inicio()">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" /><br />
+    <label for="tipo_documento">Tipo de documento:</label>
+    <select id="tipo_documento" name="tipo_documento">
+      <option value="cedula">Cédula</option>
+      <option value="tarjeta_identidad">Tarjeta de identidad</option>
+      <option value="pasaporte">Pasaporte</option>
+      <option value="otros">Otros</option>
+    </select>
+    <br />
 
-		<label for="documento">Documento:</label>
-		<input type="text" id="documento" name="documento"><br>
+    <label for="documento">Documento:</label>
+    <input type="text" id="documento" name="documento" /><br />
 
-		<input type="submit" value="Iniciar chat">
-    </form>
+    <input type="submit" value="Iniciar chat" />
+  </form>
 </div>
 <!-- fin ventana de chat-->
 <script src="js/chatbot/main.js"></script>
