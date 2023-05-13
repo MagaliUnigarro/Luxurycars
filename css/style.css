@@ -334,69 +334,98 @@ footer a:hover {
 }
 
 /*logo footer*/
-#catalogo {
-    margin: 3.125em;
-}
-
-.autos {
+.section {
+    width: 100%;
+    justify-content: center;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.logocatalogo {
+    width: auto;
+    height: 1.5em;
+}
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
-.auto {
-    width: 30%;
-    margin-bottom: 3.125em;
-    padding: 1.25em;
-    border: 0.0625em solid #ccc;
-    border-radius: 0.3125em;
-    box-shadow: 0 0 0.3125em rgba(0, 0, 0, 0.3);
-    text-align: center;
+@media only screen and (max-width: 767px) {
+    .car-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+.card {
+	position: relative;
+	width: 400px;
+	height: 300px;
+	background-color: #000;
+	overflow: hidden;
+}
+.card__image {
+	height: 200px;
+	width: 80%;
+    margin: auto;
+	object-fit: cover;
+	scale: 1.15;
+	transition: opacity 0.25s, scale 0.35s;
+}
+.card:hover .card__image {
+	opacity: 0.05;
+	scale: 1;
+}
+.card__body {
+	position: absolute;
+	inset: 0;
+	padding: 50px;
+	color:#333;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 15px;
+	justify-content: center;
+}
+.card__body::before {
+	content: '';
+	position: absolute;
+	inset: 20px;
+	opacity: 0;
+	scale: 1.25;
+	transition: opacity 0.25s, scale 0.25s;
+}
+.card:hover .card__body::before {
+	opacity: 1;
+	scale: 1;
+}
+.card__title {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+	translate: -25px;
+	transition: opacity 0.25s, translate 0.25s;
 }
 
-#titulocatalogo {
-    text-align: center;
-    margin-bottom: 3.125em;
+.card__description {
+	font-size: 20px;
+	opacity: 0;
+	translate: -25px;
+	transition: opacity 0.25s, translate 0.25s;
+    color: #000;
+}
+.card:hover .card__description {
+	opacity: 1;
+	translate: 0;
 }
 
-.auto img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 1.25em;
-    border-radius: 0.3125em;
-}
-
-.auto h3 {
-    margin-bottom: 0.625em;
-}
-
-.auto p {
-    margin-bottom: 1.25em;
-}
-
-.auto a {
-    display: inline-block;
-    padding: 0.625em 1.25em;
-    background-color: black;
-    color: #fff;
-    border-radius: 0.3125em;
-    transition: background-color 0.3s;
-    text-decoration: none;
-}
-
-.auto a:hover {
-    background-color: red;
-    text-decoration: none;
-    color: white;
-}
-
-#auto {
-    background-color: white;
-}
-
-.logoscatalogo {
-    width: 3em;
-    height: 3em;
+.card:hover .card__title {
+	opacity: 1;
+	translate: 0;
 }
 
 .sticker {
