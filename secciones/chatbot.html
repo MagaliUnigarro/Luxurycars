@@ -10,22 +10,12 @@
     <div class="botones">
         <button onclick="algoconelchat()">x</button>
     </div>
-    <form onsubmit="inicio()">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre"><br>
-        <label for="tipo_documento">Tipo de documento:</label>
-		<select id="tipo_documento" name="tipo_documento">
-			<option value="cedula">Cédula</option>
-			<option value="tarjeta_identidad">Tarjeta de identidad</option>
-			<option value="pasaporte">Pasaporte</option>
-			<option value="otros">Otros</option>
-		</select><br>
-
-		<label for="documento">Documento:</label>
-		<input type="text" id="documento" name="documento"><br>
-
-		<input type="submit" value="Iniciar chat">
-    </form>
+    <div id="seccion_mensajes">
+        <span id="mensaje_inicial">¡Hola! Soy tu asistente virtual y estoy lista para asistirte en todo lo que pueda. ¿En qué puedo ayudarte hoy?</span>
+        <!--traer las preguntas de la base de datos - ok
+        paso 2: poner las preguntas como opciones dentro del mensaje de bienvenida
+    paso 3: asignarle a cada opcion la accion de la respuesta -->
+    </div>
 </div>
 <!-- fin ventana de chat-->
 <script src="js/chatbot/main.js"></script>
