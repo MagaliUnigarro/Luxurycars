@@ -129,10 +129,8 @@ nav a:hover {
 }
 
 .tarjeta:hover {
-    /*background-color: black;*/
-    /*color: white;*/
-    /*border-radius: 3.125em;*/
-    /*border-style:ridge;*/
+    border-radius: 3.125em;
+    border-style:ridge;
     filter: invert(1);
 }
 
@@ -222,8 +220,9 @@ footer a:hover {
 }
 
 #noticias img {
+    width: 100%;
     max-width: 100%;
-    max-height: 20%;
+    max-height: 40%;
 }
 
 #noticias p {
@@ -348,6 +347,7 @@ footer a:hover {
     width: 30%;
     margin-bottom: 3.125em;
     padding: 1.25em;
+    overflow: auto;
     border: 0.0625em solid #ccc;
     border-radius: 0.3125em;
     box-shadow: 0 0 0.3125em rgba(0, 0, 0, 0.3);
@@ -361,7 +361,7 @@ footer a:hover {
 
 .auto img {
     max-width: 100%;
-    height: auto;
+    height: 50%;
     margin-bottom: 1.25em;
     border-radius: 0.3125em;
 }

@@ -16,7 +16,8 @@ const calcularTotal = (cart) => {
   return total;
 };
 
-const removeFromCart = (idProduct) => {
+const removeFromCart = (event, idProduct) => {
+    event.preventDefault()
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
   
     // Buscar el índice del producto en el carrito
@@ -26,7 +27,7 @@ const removeFromCart = (idProduct) => {
       // Si el producto existe en el carrito, eliminarlo
       cart.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cart));
-      alert("Producto eliminado del carrito");
+       alert("Producto eliminado del carrito");
     } else {
       alert("El producto no está en el carrito");
     }
@@ -60,7 +61,7 @@ const OpenCart = () => {
           </div>
         </div>
         <div class="product__actions">
-          <button class="btn btn--delete" onclick="${removeFromCart(product.id)}">Eliminar</button>
+          <button class="btn btn--delete" onclick="removeFromCart(event, ${product.id})">Eliminar</button>
         </div>
       `;
     listContainer.appendChild(productContainer);
