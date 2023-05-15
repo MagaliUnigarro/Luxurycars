@@ -53,3 +53,86 @@
   input[type="submit"]:hover {
     background-color: #3e8e41;
   }
+  #seccion_mensajes {
+    overflow-y: scroll;
+    height: 80%;
+    
+      }
+    
+      #seccion_mensajes span {
+        display: inline-block;
+        background-color: #FF0000;
+        color: #333333;
+        padding: 10px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        max-width: 80%;
+        font-family: Arial, sans-serif;
+        position: relative;
+      }
+      
+      #seccion_mensajes span.mensaje-usuario {
+        background-color: #fa6740;
+        color: #fff;
+        align-self: flex-end;
+        float: right;
+        clear: both;
+      }
+      
+      #seccion_mensajes span.mensaje-robot {
+        background-color: #333;
+        color: #fff;
+        align-self: flex-start;
+        float: left;
+        clear: both;
+        margin-left: 2em;
+        margin-right: 1em;
+      }
+      
+      #seccion_mensajes span.mensaje-usuario::before {
+        content: '\f007';
+        font-family: FontAwesome;
+        margin-right: 5px;
+        margin-left: 1em;
+      }
+      
+      #seccion_mensajes span.mensaje-robot::before {
+        content: '';
+        background-image: url(/LuxuryCars/img/chatbot.png);
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: left center;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        position: absolute;
+        left: -30px;
+        
+        transform: translateY(-50%);
+      }
+      
+      #seccion_mensajes span.mensaje-usuario::before,
+      #seccion_mensajes span.mensaje-robot::before {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      
+      #seccion_mensajes span button {
+        background-color: #fa6740;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 5px;
+      }
+      
+      #seccion_mensajes span button:hover {
+        opacity: 0.8;
+      }
